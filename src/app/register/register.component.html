@@ -1,0 +1,32 @@
+<div class="row">
+
+       <div class="card">
+          <div class="text-center" >
+             <h1 style="color: black;">Register </h1>
+             <h6 style="color: black;">Please enter email , username and password</h6>
+          </div>
+          <form>
+            <form [formGroup]=" RegisterForm " (ngSubmit)="Register()">
+                <div class="form-group">
+                    <label for="exampleUsername1" style="color: black;">Username</label>
+                    <input formControlName="Username" type="text" class="form-control" id="exampleUsername1" aria-describedby="emailHelp" placeholder="Enter username">
+                   
+                  </div>
+                 <div class="form-group">
+                   <label for="exampleInputEmail1" style="color: black;">Email address</label>
+                   <input formControlName="Email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                 </div>
+                 <div class="form-group">
+                   <label for="exampleInputPassword1" style="color: black;">Password</label>
+                   <input formControlName="Password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                 </div>
+                 
+                 <button type="submit" class="btn btn-primary">Register</button>
+               </form>
+          </form>
+         
+           <a routerLink = "/login" style="color:black;" >Already Registered? Click to login!</a>
+       </div>
+    
+ </div>
